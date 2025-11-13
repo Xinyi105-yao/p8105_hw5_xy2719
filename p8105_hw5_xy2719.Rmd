@@ -76,6 +76,7 @@ Desciption:
 ggsave("figures/problem1_p.jpg", problem1_p)
 ```
 
+
 ## Problem 2
 
 ```{r}
@@ -104,7 +105,7 @@ sim_ttest = function(n_subj, mu = 0, sigma = 5) {
 sim_results_df = 
   expand_grid(
     mu_true = 0:6,
-    iter = 1:50
+    iter = 1:5000
   ) |>
   mutate(
     results = map(mu_true, ~ sim_ttest(n_subj = 30, mu = .x, sigma = 5))
@@ -178,5 +179,12 @@ The sample average of μ across all simulations is approximately equal to the tr
 
 ```{r}
 ggsave("figures/problem2_p2.jpg", problem2_p2)
+```
+
+
+## Problem 3
+
+```{r}
+
 ```
 
